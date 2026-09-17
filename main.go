@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 
-	fmt.Println("A\tB\tr\tnotr\tp -> q\tr -> p\tF1")
-	fmt.Println("-----------------------------------------------")
+	fmt.Println("p\tq\tr\tResult")
+	fmt.Println("--------------------------------------")
 
 	bools := []bool{true, false}
 
@@ -17,8 +17,12 @@ func main() {
 				implication2 := !r || p
 				notR := !r
 				f1 := implication1 == implication2
+				conjuction1 := !(q && notR)
+				disjunction1 := p || notR
+				f2 := conjuction1 == disjunction1
+				result := f1 || f2
 
-				fmt.Printf("%t\t%t\t%t\t%t\t%t\t%t\t%t\n", p, q, r, notR, implication1, implication2, f1)
+				fmt.Printf("%t\t%t\t%t\t%t\n", p, q, r, result)
 			}
 		}
 	}
