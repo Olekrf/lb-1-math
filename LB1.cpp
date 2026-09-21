@@ -1,16 +1,21 @@
 #include <iostream>
+#include <iomanip>
 
-int main() {
-    std::cout << "p\tq\tr\tResult\n";
-    std::cout << "--------------------------------------\n";
+int main()
+{
+    std::cout << "| p | q | r | Result |\n";
+    std::cout << "|---|---|---|--------|\n";
 
-bool bools[2] = {true, false};
+    bool bools[2] = {true, false};
 
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 2; ++i)
+    {
         bool p = bools[i];
-        for (int j = 0; j < 2; ++j) {
+        for (int j = 0; j < 2; ++j)
+        {
             bool q = bools[j];
-            for (int k = 0; k < 2; ++k) {
+            for (int k = 0; k < 2; ++k)
+            {
                 bool r = bools[k];
 
                 bool implication1 = !p || q;
@@ -21,8 +26,7 @@ bool bools[2] = {true, false};
                 bool disjunction1 = p || notR;
                 bool f2 = (conjuction1 == disjunction1);
                 bool result = f1 || f2;
-
-                std::cout << p << "\t" << q << "\t" << r << "\t" << result << "\n";
+                std::cout << "| " << p << " | " << q << " | " << r << " |   " << result << "    |\n";
             }
         }
     }
