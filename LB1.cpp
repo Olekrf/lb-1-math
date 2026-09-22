@@ -3,8 +3,8 @@
 
 int main()
 {
-    std::cout << "| p | q | r | Result |\n";
-    std::cout << "|---|---|---|--------|\n";
+    std::cout << "| p | q | r | !r | p->q | r->p | F1 | q & !r | !(q & !r) | p||!r | F2 | Result |\n";
+    std::cout << "|---|---|---|----|------|------|----|--------|-----------|-------|----|--------|\n";
 
     bool bools[2] = {true, false};
 
@@ -26,7 +26,16 @@ int main()
                 bool disjunction1 = p || notR;
                 bool f2 = (conjuction1 == disjunction1);
                 bool result = f1 || f2;
-                std::cout << "| " << p << " | " << q << " | " << r << " |   " << result << "    |\n";
+                std::cout << "| " << p << " | " << q << " | " << r << " |  " 
+                          << notR << " |  " 
+                          << implication1 << "   |  " 
+                          << implication2 << "   | " 
+                          << f1 << "  |   " 
+                          << (q && notR) << "    |     " 
+                          << conjuction1 << "     |   " 
+                          << disjunction1 << "   | " 
+                          << f2 << "  |   " 
+                          << result << "    |\n";
             }
         }
     }
