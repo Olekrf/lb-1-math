@@ -1,10 +1,10 @@
 #include <iostream>
 #include <iomanip>
-
+using namespace std;
 int main()
 {
-    std::cout << "| p | q | r | !r | p->q | r->p | F1 | q & !r | !(q & !r) | p||!r | F2 | Result |\n";
-    std::cout << "|---|---|---|----|------|------|----|--------|-----------|-------|----|--------|\n";
+    cout << "| p | q | r | !r | p->q | r->p | F1 | q & !r | !(q & !r) | p||!r | F2 | Result |\n";
+    cout << "|---|---|---|----|------|------|----|--------|-----------|-------|----|--------|\n";
 
     bool bools[2] = {true, false};
 
@@ -26,7 +26,7 @@ int main()
                 bool disjunction1 = p || notR;
                 bool f2 = (conjuction1 == disjunction1);
                 bool result = f1 || f2;
-                std::cout << "| " << p << " | " << q << " | " << r << " |  " 
+                cout << "| " << p << " | " << q << " | " << r << " |  " 
                           << notR << " |  " 
                           << implication1 << "   |  " 
                           << implication2 << "   | " 
