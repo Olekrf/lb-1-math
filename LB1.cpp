@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 int main()
 {
@@ -14,9 +13,8 @@ int main()
         for (int j = 0; j < 2; ++j)
         {
             bool q = bools[j];
-            for (int k = 0; k < 2; ++k)
+            for (int r = 0; r < 2; ++r)
             {
-                bool r = bools[k];
 
                 bool implication1 = !p || q;
                 bool implication2 = !r || p;

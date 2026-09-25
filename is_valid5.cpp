@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    bool is_valid = true;
+    cout << "| p | q | r | s | f1 | f2 | f3 | g | result |\n";
+    cout << "|---|---|---|---|----|----|----|---|--------|\n";
 
     for (int p = 0; p <= 1; ++p) {
         for (int q = 0; q <= 1; ++q) {
@@ -16,24 +17,18 @@ int main() {
 
                     bool g = q;
 
-                    bool expr = f1 && f2 && f3 && !g;
+                    bool result = f1 && f2 && f3 && !g;
+                    cout << "| " << p << " | " << q << " | " << r << " | " << s 
+                    << " |  " << f1 << " |  " 
+                    << f2 << " |  " << f3 
+                    << " | " << g << " |    " 
+                    << result << "   |\n";
 
-                    if (expr) {
-                        is_valid = false;
-                        cout << "Знайдено контрприклад:\n";
-                        cout << "p = " << p << " | q = " << q 
-                                  << " | r = " << r << " | s = " << s << " |\n\n";
+                        
                     }
                 }
             }
         }
-    }
-
-    if (is_valid) {
-        cout << "Міркування коректне, вираз = False для всіх інтерпретацій\n";
-    } else {
-        cout << "Міркування некоректне\n";
-    }
 
     return 0;
 }
