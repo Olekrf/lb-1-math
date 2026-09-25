@@ -18,7 +18,7 @@ int main() {
 
                     bool expr = f1 && f2 && f3 && !g;
 
-                    if (expr == true) {
+                    if (expr) {
                         is_valid = false;
                         cout << "Знайдено контрприклад:\n";
                         cout << "p = " << p << " | q = " << q 
@@ -29,7 +29,7 @@ int main() {
         }
     }
 
-    if (is_valid == true) {
+    if (is_valid) {
         cout << "Міркування коректне, вираз = False для всіх інтерпретацій\n";
     } else {
         cout << "Міркування некоректне\n";
