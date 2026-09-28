@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 
-	fmt.Println("p\tq\tr\tResult")
-	fmt.Println("--------------------------------------")
+	fmt.Println(" p | q | r | Result |")
+	fmt.Println("|--------------------------|")
 
 	bools := []bool{true, false}
 
@@ -22,7 +22,7 @@ func main() {
 				f2 := conjuction1 == disjunction1
 				result := f1 || f2
 
-				fmt.Printf("%t\t%t\t%t\t%t\n", p, q, r, result)
+				fmt.Printf("| %t | %t | %t | %t|\n", p, q, r, result)
 			}
 		}
 	}

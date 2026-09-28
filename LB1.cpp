@@ -16,22 +16,22 @@ int main()
             for (int r = 0; r < 2; ++r)
             {
 
-                bool implication1 = !p || q;
-                bool implication2 = !r || p;
+                bool implic1 = !p || q;
+                bool implic2 = !r || p;
                 bool notR = !r;
-                bool f1 = (implication1 == implication2);
-                bool conjuction1 = !(q && notR);
-                bool disjunction1 = p || notR;
-                bool f2 = (conjuction1 == disjunction1);
+                bool f1 = (implic1 == implic2);
+                bool conjuction = !(q && notR);
+                bool OR = p || notR;
+                bool f2 = (conjuction == OR);
                 bool result = f1 || f2;
                 cout << "| " << p << " | " << q << " | " << r << " |  " 
                           << notR << " |  " 
-                          << implication1 << "   |  " 
-                          << implication2 << "   | " 
+                          << implic1 << "   |  " 
+                          << implic2 << "   | " 
                           << f1 << "  |   " 
                           << (q && notR) << "    |     " 
-                          << conjuction1 << "     |   " 
-                          << disjunction1 << "   | " 
+                          << conjuction << "     |   " 
+                          << OR << "   | " 
                           << f2 << "  |   " 
                           << result << "    |\n"
                           << "|---|---|---|----|------|------|----|--------|-----------|-------|----|--------|\n";
