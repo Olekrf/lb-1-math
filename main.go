@@ -2,10 +2,17 @@ package main
 
 import "fmt"
 
+func toint(b bool) int {
+	if b {
+		return 1
+	}
+	return 0
+}
+
 func main() {
 
-	fmt.Println(" p | q | r | Result |")
-	fmt.Println("|--------------------------|")
+	fmt.Println("| p | q | r | Result |")
+	fmt.Println("|---|---|---|--------|")
 
 	bools := []bool{true, false}
 
@@ -22,7 +29,8 @@ func main() {
 				f2 := conjuction1 == disjunction1
 				result := f1 || f2
 
-				fmt.Printf("| %t | %t | %t | %t|\n", p, q, r, result)
+				fmt.Printf("| %d | %d | %d |   %d    |\n", toint(p), toint(q), toint(r), toint(result))
+				fmt.Printf("|---|---|---|--------|\n")
 			}
 		}
 	}

@@ -11,7 +11,7 @@ func toint(b bool) int {
 
 func main() {
 	fmt.Println("| p | q | r | s | f1 | f2 | f3 | g | result |")
-	fmt.Println("|-------------------------------------------|")
+	fmt.Println("|---|---|---|---|----|----|----|---|--------|")
 
 	bools := []bool{true, false}
 
